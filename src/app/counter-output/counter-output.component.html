@@ -1,0 +1,13 @@
+<div class="row">
+	<div class="col-12 mt-5">
+		<div class="d-flex justify-content-between">
+			<h1>Count</h1>
+			<app-counter-controls />
+		</div>
+		<hr />
+	</div>
+	<div class="col-12">
+		<span class="count-number d-block">Normal: {{ counter$ | async }}</span>
+		<span class="count-number">Double:</span>
+	</div>
+</div>

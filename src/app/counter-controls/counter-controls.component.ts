@@ -2,7 +2,10 @@ import { Component, output } from '@angular/core';
 
 // Ngrx
 import { Store } from '@ngrx/store';
-import { increment /* IncrementAction*/ } from '../store/counter.actions';
+import {
+  decrement,
+  increment /* IncrementAction*/,
+} from '../store/counter.actions';
 
 @Component({
   selector: 'app-counter-controls',
@@ -19,5 +22,7 @@ export class CounterControlsComponent {
     this.store.dispatch(increment({ value: 2 }));
   }
 
-  decrement() {}
+  decrement() {
+    this.store.dispatch(decrement({ value: 2 }));
+  }
 }

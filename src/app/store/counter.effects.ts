@@ -26,8 +26,7 @@ export class CounterEffects {
     })
   ));
 
-  saveCount = createEffect(
-    () => this.actions$.pipe(
+  saveCount = createEffect(() => this.actions$.pipe(
       ofType(increment, decrement),
       withLatestFrom(this.store$.select(selectCount)),
       tap(([action, counter]) => {
